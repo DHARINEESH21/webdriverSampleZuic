@@ -1,0 +1,268 @@
+1.Write a Java program to create a Date object using the Calendar class.
+
+package jan26Assignments;
+import java.util.*;
+public class DataObjectCalenderClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		    {
+		     int year = 2023;
+		     int month = 8; 
+		     int date = 1;
+		     Calendar cal = Calendar.getInstance();
+		     cal.clear();
+		     System.out.println();
+		     cal.set(Calendar.YEAR, year);
+		     cal.set(Calendar.MONTH, month);
+		     cal.set(Calendar.DATE, date);
+		     System.out.println(cal.getTime());
+		     System.out.println();
+			 }
+		}
+
+
+	}
+
+***OUTPUT****
+Fri Sep 01 00:00:00 IST 2023
+
+
+
+
+2.Write a Java program to get and display information (year, month, day, hour, minute) about a default calendar.
+
+package jan26Assignments;
+import java.util.*;
+
+public class DefaultInfoOfDefaultCalender {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		    {
+		       // Create a default calendar
+		        Calendar cal = Calendar.getInstance();
+		    
+			    System.out.println();
+		        System.out.println("Year: " + cal.get(Calendar.YEAR));
+		        System.out.println("Month: " + cal.get(Calendar.MONTH));
+		        System.out.println("Day: " + cal.get(Calendar.DATE));
+		        System.out.println("Hour: " + cal.get(Calendar.HOUR));
+		        System.out.println("Minute: " + cal.get(Calendar.MINUTE));
+			    System.out.println();
+		    }
+		}
+
+
+	}
+
+
+***OUTPUT****
+
+Year: 2024
+Month: 0
+Day: 27
+Hour: 5
+Minute: 45
+
+
+
+3.Write a Java program to get the minimum value of the year, month, week, and date from the current date of a default calendar.
+
+package jan26Assignments;
+import java.util.*;
+
+public class CurrentDateOfDefaultCalender {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		    {
+		    
+		        Calendar cal = Calendar.getInstance();
+				System.out.println();
+				System.out.println("\nCurrent Date and Time:" + cal.getTime());		
+				int actualMaxYear = cal.getActualMinimum(Calendar.YEAR);
+				System.out.println("Actual Minimum Year: "+actualMaxYear);
+				int actualMaxMonth = cal.getActualMinimum(Calendar.MONTH);
+				System.out.println("Actual Minimum Month: "+actualMaxMonth);
+				int actualMaxWeek = cal.getActualMinimum(Calendar.WEEK_OF_YEAR);
+				System.out.println("Actual Minimum Week of Year: "+actualMaxWeek);
+				int actualMaxDate = cal.getActualMinimum(Calendar.DATE);
+				System.out.println("Actual Minimum Date: "+actualMaxDate+"\n");
+					
+			  }
+		}
+
+
+	}
+
+
+***OUTPUT****
+
+
+
+Current Date and Time:Sat Jan 27 17:47:51 IST 2024
+Actual Minimum Year: 1
+Actual Minimum Month: 0
+Actual Minimum Week of Year: 1
+Actual Minimum Date: 1
+
+4.Write a Java program to get the maximum value of year, month, week, date from the current date of a default calendar.
+
+package jan26Assignments;
+import java.util.*;
+public class MinCurrentDateOfDefaultCalender {
+		public static void main(String[] args)
+		    {
+		     // Create a default calendar
+		        Calendar cal = Calendar.getInstance();
+				System.out.println();
+				System.out.println("\nCurrent Date and Time:" + cal.getTime());		
+				int actualMaxYear = cal.getActualMaximum(Calendar.YEAR);
+				System.out.println("Actual Maximum Year: "+actualMaxYear);
+				int actualMaxMonth = cal.getActualMaximum(Calendar.MONTH);
+				System.out.println("Actual Maximum Month: "+actualMaxMonth);
+				int actualMaxWeek = cal.getActualMaximum(Calendar.WEEK_OF_YEAR);
+				System.out.println("Actual Maximum Week of Year: "+actualMaxWeek);
+				int actualMaxDate = cal.getActualMaximum(Calendar.DATE);
+				System.out.println("Actual Maximum Date: "+actualMaxDate+"\n");
+		
+				
+			  }
+		}
+
+
+***OUTPUT****
+
+Current Date and Time:Sat Jan 27 17:46:30 IST 2024
+Actual Maximum Year: 292278994
+Actual Maximum Month: 11
+Actual Maximum Week of Year: 52
+Actual Maximum Date: 31
+
+
+	
+5.Write a Java program to get the number of months left in the year.
+
+package jan26Assignments;
+import java.time.*;
+import java.time.temporal.TemporalAdjusters;
+public class MonthLeftInYear {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		     LocalDate todayDate = LocalDate.now(); 
+		     LocalDate lastDayOfYear = todayDate.with(TemporalAdjusters.lastDayOfYear());
+		     Period period = todayDate.until(lastDayOfYear);
+		     System.out.println();
+		     System.out.println("Months remaining in the year: "+period.getMonths());	
+		     System.out.println();
+		   }
+		}
+
+
+***OUTPUT****
+
+Months remaining in the year: 11
+
+6.Write a Java program to convert a string to a date.
+
+package jan26Assignments;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class StringToDate {
+
+	public static void main(String[] args) {
+	
+        String string = "2024-01-27";
+        LocalDate date = LocalDate.parse(string, DateTimeFormatter.ISO_DATE);
+
+        System.out.println(date);
+
+	}
+
+}
+
+
+***OUTPUT****
+
+2024-01-27
+
+
+7.Write a Java program to compute the difference between two dates (years, months, days).
+
+package jan26Assignments;
+import java.time.*;
+import java.util.*;
+public class dbTwoDate {
+
+	public static void main(String[] args) {
+
+	
+		        LocalDate presentdate = LocalDate.of(2024, 01, 26);
+		        LocalDate currentdate = LocalDate.now();
+		 
+		        Period diff = Period.between(presentdate, currentdate);
+		 
+		     System.out.printf("\nDifference is %d years, %d months and %d days old\n\n", 
+		                    diff.getYears(), diff.getMonths(), diff.getDays());
+		  }
+		}
+
+
+***OUTPUT****
+
+Difference is 0 years, 0 months and 1 days old
+
+
+	
+**************File Operation***********************
+1)Write a Java program to get specific files with extensions from a specified folder.
+
+package FileSamples;
+import java.io.File;
+import java.io.FilenameFilter;
+import java.util.Scanner;
+public class SpecificFiles {
+
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stubSystem.out.println("Enter the directory path");
+		System.out.println("Enter the directory path");
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		// TODO Auto-generated method stub
+		File file = new File(s);
+		
+		String[] list = file.list(new FilenameFilter()
+				{
+					@Override
+					public boolean accept(File dir,String name)
+					{
+						if(name.toLowerCase().endsWith(".txt"))
+						{
+							return true;
+						}
+						else
+						{
+							return false;
+						}
+					}
+				});
+		for(String f:list)
+		{
+			System.out.println(f);
+		}
+
+	}
+
+}
+
+ ******OUTPUT******
+Enter the directory path
+C://NEW FOLDER
+Text Document.txt

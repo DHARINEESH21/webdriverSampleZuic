@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="SampleSuite" thread-count="2" parallel="classes" timeout="1000">
+ <test  name="ModuleOneTest">
+	 
+	 
+	<!--  <test thread-count="5" name="ModuleTest">
+		  <Parameters name="browser" value="chrome"/> -->
+	
+
+
+
+<!--
+<groups>
+<define name="SmokeTest">
+	<include name = "feature3"/>
+
+</define>	
+
+<define name="RegressionTest">
+	<include name = "feature1"/>
+	<include name = "feature2"/>
+
+</define>	
+	<run>
+		<include name="RegressionTest"/>
+		<include name="SmokeTest"/>
+	
+</groups>	
+	</run> -->	
+
+ 
+
+    <classes>
+		
+		
+		<!-- 
+		 <class name="groupScripts.SampleThreeTest"/>
+       <class name="groupScripts.SampleTwoTest"/>-->
+     <!--<class name="testScripts.LoginPageParameterizedTest"/>
+       --> 
+       
+      <!-- 
+      
+      <class name="parallelScripts.SampleOneTest"/>
+		    <class name="parallelScripts.SampleTwoTest"/>
+       --> 
+       
+       
+        <class name = "testScripts.SampleOneTest"/>  <!-- for maven-->
+      
+    </classes>
+  </test> <!-- ModuleTest -->
+  <!-- TestSuite -> Tests -> Classes -> Test Methods --><!-- -->
+</suite> <!-- Suite -->
