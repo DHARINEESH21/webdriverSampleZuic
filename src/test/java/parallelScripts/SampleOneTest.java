@@ -11,6 +11,7 @@ public class SampleOneTest {
 		  driver = new ChromeDriver();
 		  long id = Thread.currentThread().getId();
 		  System.out.println("Test1 in SampleOne..."+id);
+		  System.out.println("Test1 in SampleOne..."+id);
 	  }
 	  
 	  @Test
