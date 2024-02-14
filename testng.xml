@@ -47,7 +47,7 @@
        --> 
        
        
-        <class name = "parallelScripts.SampleTwoTest"/>  <!-- for maven-->
+        <class name = "parallelScripts.SampleThreeTest"/>  <!-- for maven-->
       
     </classes>
   </test> <!-- ModuleTest -->
